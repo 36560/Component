@@ -25,6 +25,7 @@ choose that to be notified only for future tasks.
     </mailSettings>
 </system.net>
 ```
+
 ### Startup.class
  Create startup OWIN class if you don't have it. Ten create methods, witch turn on ? hangfire service. 
  
@@ -44,28 +45,27 @@ In Noti.cshtml:
 
  @model YourProjectName.YourFolderName.Noti
 
-
-By hangfire dashboard you can control scheduled jobs (in this case: state of every notification send to user)
-
-
-
  
 #### Note: 
 If you use google account, you had to enable special option: https://support.google.com/accounts/answer/6010255?hl=en. It allows use your email in own apps. 
   
 ### Database connection, current user and notification options
-  You need to in own way get database connection and email of current logged use. 
+  You need to in own way get database connection and email of current logged use.
+   ... Invoke method turnEmail (yourDatabaseConnection, currentUserEmail, query   , nameColumnWithContentofTask) 
 
 
-
-
- Wywołuje na niej metodę turnEmailprzekazując jako argumenty połącznie z bazą, emailzalogowanego użytkownika,  kwerendę uzyskującą zadania  z  bazy  oraz  nazwę  kolumny pod  jaką  znajdują  sięzawartościpowiadomień. Programista w dowolny sposób przekazuje również informację o sposobie generowania powiadamiania.Umożliwia to dostarczenie  do  komponentunumeruopcji. Może on być spersonalizowany dla każdego użytkownika, bądź wybrany odgórnie przez programistę
+Programista w dowolny sposób przekazuje również informację o sposobie generowania powiadamiania.Umożliwia to dostarczenie  do  komponentunumeruopcji. Może on być spersonalizowany dla każdego użytkownika, bądź wybrany odgórnie przez programistę
 
 
 ## Using component
-
  Create instance of NotificationController in place where you want run notification component (eg. controller for index page after successfull login)
  
+ Query shoud contains:
+  - name or content notifications (String)
+  - email of current user
+  - time - task deadline
+
+By hangfire dashboard you can control scheduled jobs (in this case: state of every notification send to user). Just after your address add '/hangfire'.
 
 ## Download
 - project example   link to example (I used 
