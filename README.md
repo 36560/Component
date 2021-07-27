@@ -91,12 +91,16 @@ choose that to be notified only for future tasks.
     notiController2.turnEmail(con, columnName, query, useremail,option);
    ```
    
- Query shoud contains:
+ Fragment query shoud contains:
   - name or content notifications (String)
   - email of current user
   - time, task deadline (it will be compared with current day and choose tasks to notification depends on notification option)
  
- eg. string query = @"SELECT [NotiName], [TimeTask], [UserEmail] from [dbo].[Table_Task] where [UserEmail]='" + useremail + "' AND [TimeTask]"; //get tasks for current user
+ eg.
+ 
+   ```
+   string query = @"SELECT [NotiName], [TimeTask], [UserEmail] from [dbo].[Table_Task] where [UserEmail]='" + useremail + "' AND [TimeTask]";
+   ```
 
 Notification options:
  - option = 1 notification send to user about forgotten tasks
