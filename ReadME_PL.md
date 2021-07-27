@@ -29,7 +29,7 @@ a następnie użytkownik może np. wybrać opcję, aby otrzymywać powiadomienia
 ````
 
 ### Startup.class
- Utwórz klasę startową OWIN, jeśli jej nie masz. Następnie wywołaj te metody:
+  Utwórz klasę startową OWIN, jeśli jej nie masz. Następnie wywołaj te metody:
   
  ```
  public partial class Startup
@@ -58,6 +58,27 @@ a następnie użytkownik może np. wybrać opcję, aby otrzymywać powiadomienia
  - Noti.cshtml (po zainstalowaniu Postal dodaj to do folderu Views/Emails) VIEW
  - NotiController.cs (dodaj to do folderu kontrolera) KONTROLER
 
+
+ W Noti.cshtml zmień pierwszą linię dla przestrzeni nazw modelu Noti:
+ 
+ ```
+  @model YourProjectName.NameofFolderwithModel.Users.Noti
+  To: @Model.UserEmail
+  Subject: @Model.Info
+
+  <p>This task waiting for you. Go to the app to complete it.</p>
+  @foreach (string item in @Model.TaskList)
+  {
+      <p> >> @item</p><br>
+  }
+ ```
+ 
+ ## Korzystanie z komponentu
+  Utwórz instancję NotificationController w miejscu, w którym chcesz uruchomić komponent powiadomień (np. w kontrolerze dla strony po poprawnym zalogowaniu).
+  
+  ````
+  NotiController notiController2 = nowy NotiController();
+  ````
 
 
 
