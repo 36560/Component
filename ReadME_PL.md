@@ -81,4 +81,11 @@ a następnie użytkownik może np. wybrać opcję, aby otrzymywać powiadomienia
   ````
 
 
+## Download
+- przykładowy projekt (z użyciem wbudowanej bazy sql)
+- tylko komponent powiadomień
+
+## Przydatne linki
+Dokumentacja Hangfire: https://docs.hangfire.io/en/latest/
+Dokumentacja w języku ANG:
 
