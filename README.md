@@ -8,7 +8,7 @@
 ## Describe
 
  Component allows sending scheduled email to users in Tasks/ToDo (web)apps.
-It may be used as reminder about undone/today/future tasks or events for every user. Developer can also allow users to configure this option and then eg. user can 
+It may be used as reminder about forgotten/todays/future tasks or events for every user. Developer can also allow users to configure this option and then eg. user can 
 choose that to be notified only for future tasks. 
 
 ## Configuration
@@ -75,12 +75,10 @@ choose that to be notified only for future tasks.
 ## Using component
 
  Create instance of NotificationController in place where you want run notification component (eg. in controller for page after successfull login)
- 
- static string con = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
- 
-   ```
+
+  ```
   NotiController notiController2 = new NotiController();
-   ```
+  ```
    
    Invoke method turnEmail which contains:
    - con: your database connection {String}
