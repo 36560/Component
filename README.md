@@ -3,7 +3,7 @@
 Notification component (MVC) .NET using Hangfire and Postal. 
 
 Versions:
-- Hangfire
+- Hangfire - 
 - Postal
 
 Describe:
@@ -15,25 +15,19 @@ Configuration:
  You need to install hingfire and Postal v4 (for .Net 4) by NuGet .
 In web.conf set your server email. It's example for gmail:
 
-[  
-<system.net>
+[  <system.net> 
     <mailSettings>
       <smtp from="youremail@gmail.com">
         <network host="smtp.gmail.com" port="587" userName="youremail@gmail.com" password="yourPassword" enableSsl="true" />
       </smtp>
     </mailSettings>
-  </system.net> 
-  ]
+  </system.net> ]
 
 Note: if you use google account you had to enable special option: https://support.google.com/accounts/answer/6010255?hl=en. It allows use your email in own apps. 
   
   Database connection
   
   
-
-
-	[screen]
-
 
 
 In startup class (create OWIN class if you don't have it) create methods, witch turn on ? hangfire service. 
@@ -47,7 +41,7 @@ In Noti.cshtml:
 By hangfire dashboard
 
 Download:
-- project example   link to example
+- project example   link to example (I used 
 - only notification component
 
 
