@@ -5,7 +5,7 @@
  - Hangfire 1.7.22
  - Postal.Mvc4.1.2.0
 
-## Describe
+## Description
 
  Component allows sending scheduled email to users in Tasks/ToDo (web)apps.
 It may be used as reminder about forgotten/todays/future tasks or events for every user. Developer can also allow users to configure this option and then eg. user can 
