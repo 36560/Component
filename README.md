@@ -46,7 +46,7 @@ choose that to be notified only for future tasks.
  If you use google account, you have to enable special option: https://support.google.com/accounts/answer/6010255?hl=en. It allows use your email in own apps. 
   
 ### Database connection, current user and notification options
-  In own way you need to get database connection and email of current logged user. In base you may stored also notification option for every user or set default for app.
+  In own way you need to get database connection and email of current logged user. In base you may stored also notification option for every user or set default for the entire app.
  More about notification options you find below in using component.
 
 ## Attaching component to project
