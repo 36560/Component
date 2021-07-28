@@ -2,7 +2,7 @@
 
 ## Versions
  - .Net Framework v4.8
- - Hangfire.Core 1.7.22
+ - Hangfire 1.7.22
  - Postal.Mvc4.1.2.0
 
 ## Description
@@ -35,7 +35,7 @@ choose that to be notified only for future tasks.
      {
          public void Configuration(IAppBuilder app)
          {
-             //your other methods like connection with database
+             GlobalConfiguration.Configuration.UseSqlServerStorage("DefaultConnection");
              app.UseHangfireDashboard();
              app.UseHangfireServer();            
          }
@@ -75,7 +75,7 @@ choose that to be notified only for future tasks.
 ## Using component
 
  Create instance of NotificationController in place where you want run notification component (eg. in controller for page after successfull login)
-
+-change namespace to your project
   ```
   NotiController notiController2 = new NotiController();
   ```
@@ -129,7 +129,7 @@ Notification options:
 By hangfire dashboard you can control scheduled jobs (in this case: state of every notification send to user). Just after your address add '/hangfire'.
 
 ## Download
-- project example (I used embeded sql base)
+- project example (I used SQL server base avaliable in Visual Studio)
 - only notification component
 
 ## Useful Links
