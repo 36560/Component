@@ -2,7 +2,7 @@
 
 ## Versions
  - .Net Framework v4.8
- - Hangfire 1.7.22
+ - Hangfire.Core 1.7.22
  - Postal.Mvc4.1.2.0
 
 ## Description
