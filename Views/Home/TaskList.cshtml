@@ -1,0 +1,48 @@
+﻿@model IEnumerable<webComponentT2.Models.TaskTable>
+
+@{
+    ViewBag.Title = "TaskList";
+}
+
+<h2>Task List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Task")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotiName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeTask)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) 
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotiName)
+        </td>
+        <td>
+
+            @Html.DisplayFor(modelItem => item.TimeTask)
+        </td>
+        <td>
+            <!-- Action an controller name -->
+            <a href="@Url.Action("Delete", "Home", new { id = item.TaskID })" class="btn btn-warning" role="button">Delete</a>
+            <a href="@Url.Action("Edit", "Home", new { id = item.TaskID })" class="btn btn-info" role="button">Edit</a>
+
+        </td>
+    </tr>
+}
+
+</table>

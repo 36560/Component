@@ -1,0 +1,9 @@
+﻿@model NotiComponent.ViewModels.Noti.Noti
+To: @Model.UserEmail
+Subject: @Model.Info
+
+<p>This task waiting for you. Go to the app to complete it.</p>
+@foreach (string item in @Model.TaskList)
+{
+    <p> >> @item</p><br>
+}
