@@ -134,4 +134,4 @@ By hangfire dashboard you can control scheduled jobs (in this case: state of eve
 
 ## Useful Links
 Hangfire documentation: https://docs.hangfire.io/en/latest/
-Documentation in PL language: 
+
